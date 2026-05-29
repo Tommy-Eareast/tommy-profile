@@ -1,7 +1,9 @@
+import Section from "@/components/Section";
+
 export default function Skills() {
     return (
-        <section id="skills">
-            <h2>Skills Section</h2>
-        </section>
+        <Section id="skills" title="Skills">
+            <p className="text-gray-600">Skills and tech stack section.</p>
+        </Section>
     );
 }

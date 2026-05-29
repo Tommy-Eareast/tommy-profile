@@ -1,7 +1,9 @@
+import Section from "@/components/Section";
+
 export default function Contact() {
     return (
-        <section id="contact">
-            <h2>Contact Section</h2>
-        </section>
+        <Section id="contact" title="Contact">
+            <p className="text-gray-600">Contact form will live here.</p>
+        </Section>
     );
 }

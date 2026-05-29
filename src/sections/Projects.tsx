@@ -1,7 +1,11 @@
+import Section from "@/components/Section";
+
 export default function Projects() {
     return (
-        <section id="projects">
-            <h2>Projects Section</h2>
-        </section>
+        <Section id="projects" title="Projects">
+            <p className="text-gray-600">
+                OPENET and portfolio project cards will go here.
+            </p>
+        </Section>
     );
 }
