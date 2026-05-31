@@ -16,8 +16,7 @@ export default function Button({
     target,
 }: ButtonProps) {
     const baseStyles =
-        "inline-flex items-center rounded-full px-7 py-3 text-sm font-medium transition duration-300";
-
+        "inline-flex items-center rounded-full px-7 py-3 text-sm font-medium transition-all duration-300";
     const variants = {
         primary: "text-white hover:opacity-90",
 

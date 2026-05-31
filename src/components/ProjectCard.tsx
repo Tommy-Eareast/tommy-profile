@@ -16,7 +16,7 @@ export default function ProjectCard({
     liveUrl,
 }: ProjectCardProps) {
     return (
-        <article className="overflow-hidden rounded-[2rem] border border-black/5 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-md">
+        <article className="overflow-hidden rounded-[2rem] border border-black/5 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="relative h-56 w-full bg-gray-100">
                 <Image src={image} alt={title} fill className="object-cover" />
             </div>

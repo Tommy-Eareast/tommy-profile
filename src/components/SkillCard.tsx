@@ -10,7 +10,7 @@ export default function SkillCard({
     items,
 }: SkillCardProps) {
     return (
-        <article className="rounded-[2rem] border border-black/5 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:shadow-md">
+        <article className="rounded-[2rem] border border-black/5 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="mb-6">
                 <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
 

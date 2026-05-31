@@ -6,7 +6,7 @@ export default function About() {
         <Section id="about" title="About">
             <div className="space-y-12">
                 <div className="max-w-3xl">
-                    <p className="text-lg leading-8 text-gray-500">
+                    <p className="text-lg leading-8 text-gray-500 lg:text-xl">
                         I build practical software systems that bridge
                         engineering, AI, and real-world business workflows. With
                         a background in IT and Commerce, I enjoy approaching
