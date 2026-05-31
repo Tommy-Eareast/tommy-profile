@@ -2,9 +2,15 @@ import Container from "@/components/Container";
 
 export default function Footer() {
     return (
-        <footer className="border-t border-gray-200 py-8">
+        <footer className="border-t border-black/5 py-8">
             <Container>
-                <p className="text-sm text-gray-500">© 2026 Tommy</p>
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                    <p>© 2026 Tommy</p>
+
+                    <a href="#hero" className="transition hover:text-gray-600">
+                        Back to top
+                    </a>
+                </div>
             </Container>
         </footer>
     );
