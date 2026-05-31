@@ -5,7 +5,7 @@ import Input from "@/components/Input";
 export default function Contact() {
     return (
         <Section id="contact" title="Contact">
-            <div className="grid gap-12 lg:grid-cols-2">
+            <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
                 {/* Left Side */}
                 <div className="space-y-6">
                     <p className="max-w-md text-lg leading-8 text-gray-500">

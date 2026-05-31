@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <section id="hero" className="flex min-h-[90vh] items-center">
             <Container>
-                <div className="grid items-center gap-16 lg:grid-cols-2">
+                <div className="grid items-center gap-10 lg:gap-16 lg:grid-cols-2">
                     {/* Left Content */}
                     <div>
                         <p
@@ -18,7 +18,7 @@ export default function Hero() {
                             Yutao Chen
                         </p>
 
-                        <h1 className="mb-6 text-5xl font-semibold tracking-tight text-gray-900 lg:text-7xl">
+                        <h1 className="mb-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
                             Building software systems that connect AI and
                             real-world workflows
                         </h1>
@@ -51,7 +51,7 @@ export default function Hero() {
                     </div>
 
                     {/* Right Image */}
-                    <div className="flex justify-center lg:justify-end">
+                    <div className="order-first flex justify-center lg:order-none lg:justify-end">
                         <div className="overflow-hidden rounded-[2rem] border border-black/5 bg-gray-50 shadow-sm transition duration-300 hover:-translate-y-1">
                             <Image
                                 src="/images/profile.jpg"

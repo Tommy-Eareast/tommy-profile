@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 border-b border-black/5 bg-white/70 backdrop-blur-xl">
             <Container>
-                <nav className="flex h-16 items-center justify-between">
+                <nav className="flex h-16 items-center justify-between gap-4">
                     <a
                         href="#hero"
                         className="text-sm font-semibold tracking-tight"
@@ -12,7 +12,7 @@ export default function Navbar() {
                         Tommy
                     </a>
 
-                    <ul className="flex items-center gap-6 text-sm text-gray-500">
+                    <ul className="flex flex-wrap items-center justify-end gap-4 text-sm text-gray-500 sm:gap-6">
                         <li>
                             <a
                                 href="#about"
@@ -21,7 +21,6 @@ export default function Navbar() {
                                 About
                             </a>
                         </li>
-
                         <li>
                             <a
                                 href="#projects"
@@ -30,7 +29,6 @@ export default function Navbar() {
                                 Projects
                             </a>
                         </li>
-
                         <li>
                             <a
                                 href="#skills"
@@ -39,7 +37,6 @@ export default function Navbar() {
                                 Skills
                             </a>
                         </li>
-
                         <li>
                             <a
                                 href="#contact"
