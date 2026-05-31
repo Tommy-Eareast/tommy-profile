@@ -9,7 +9,7 @@ export default function Hero() {
                     {/* Left Content */}
                     <div>
                         <p
-                            className="mb-4 text-sm font-medium"
+                            className="mb-4 text-lg font-medium"
                             style={{
                                 color: "var(--primary-color)",
                             }}
@@ -67,7 +67,7 @@ export default function Hero() {
                                 alt="Yutao Chen profile image"
                                 width={430}
                                 height={540}
-                                className="object-cover w-auto"
+                                className="object-cover"
                                 priority
                             />
                         </div>
