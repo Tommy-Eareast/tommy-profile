@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Image from "next/image";
 
@@ -29,33 +30,23 @@ export default function Hero() {
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            {/* Primary CTA */}
-                            <a
-                                href="#projects"
-                                className="rounded-full px-7 py-3 text-sm font-medium text-white transition duration-300 hover:opacity-90"
-                                style={{
-                                    backgroundColor: "var(--primary-color)",
-                                }}
-                            >
-                                View Projects
-                            </a>
+                            <Button href="#projects">View Projects</Button>
 
-                            {/* Secondary CTA */}
-                            <a
+                            <Button
                                 href="/resumes/SWE-resume-yutao-chen.pdf"
+                                variant="secondary"
                                 target="_blank"
-                                className="rounded-full border border-gray-200 px-6 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
                             >
                                 Software Engineering Resume
-                            </a>
+                            </Button>
 
-                            <a
+                            <Button
                                 href="/resumes/product-consulting-resume-yutao-chen.pdf"
+                                variant="secondary"
                                 target="_blank"
-                                className="rounded-full border border-gray-200 px-6 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
                             >
                                 Product & Consulting Resume
-                            </a>
+                            </Button>
                         </div>
                     </div>
 

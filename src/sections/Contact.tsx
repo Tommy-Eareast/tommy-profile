@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Section from "@/components/Section";
 import Input from "@/components/Input";
 
@@ -56,15 +57,7 @@ export default function Contact() {
                         />
                     </div>
 
-                    <button
-                        type="submit"
-                        className="rounded-full px-7 py-3 text-sm font-medium text-white transition hover:opacity-90"
-                        style={{
-                            backgroundColor: "var(--primary-color)",
-                        }}
-                    >
-                        Send Message
-                    </button>
+                    <Button>Send Message</Button>
                 </form>
             </div>
         </Section>
