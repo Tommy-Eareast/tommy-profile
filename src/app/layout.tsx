@@ -13,11 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Tommy Portfolio",
-    description:
-        "Building software systems that connect AI and real-world workflows.",
-};
+    title: "Tommy | Software, AI & Systems",
 
+    description:
+        "Portfolio of Yutao Chen (Tommy), building software systems that connect AI and real-world workflows.",
+
+    keywords: [
+        "Tommy Chen",
+        "Yutao Chen",
+        "Software Engineer",
+        "AI",
+        "Next.js",
+        "Portfolio",
+        "UNSW",
+    ],
+};
 export default function RootLayout({
     children,
 }: Readonly<{
