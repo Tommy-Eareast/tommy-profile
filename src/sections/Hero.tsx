@@ -1,8 +1,12 @@
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Image from "next/image";
 
 export default function Hero() {
+    const { messages } = useLanguage();
     return (
         <section id="hero" className="flex min-h-[90vh] items-center">
             <Container>
@@ -15,7 +19,7 @@ export default function Hero() {
                                 color: "var(--primary-color)",
                             }}
                         >
-                            Yutao Chen
+                            {messages.hero.name}
                         </p>
 
                         <h1 className="mb-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
@@ -29,7 +33,7 @@ export default function Hero() {
                             thinking.
                         </p>
 
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                             <Button href="#projects">View Projects</Button>
 
                             <Button
