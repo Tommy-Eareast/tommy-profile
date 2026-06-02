@@ -1,7 +1,6 @@
-"use client";
-
 import { useLanguage } from "@/lib/LanguageContext";
 import Container from "@/components/Container";
+import Image from "next/image";
 
 export default function Navbar() {
     const { language, toggleLanguage, messages } = useLanguage();
@@ -9,11 +8,14 @@ export default function Navbar() {
         <header className="sticky top-0 z-50 border-b border-black/5 bg-white/70 backdrop-blur-xl">
             <Container>
                 <nav className="flex h-16 items-center justify-between gap-4">
-                    <a
-                        href="#hero"
-                        className="text-xs sm:text-sm font-semibold tracking-tight"
-                    >
-                        {messages.nav.name}
+                    <a href="#hero" className="flex items-center">
+                        <Image
+                            src="/logo.svg"
+                            alt="Tommy"
+                            width={28}
+                            height={28}
+                            priority
+                        />
                     </a>
 
                     <ul className="flex flex-wrap items-center justify-end gap-4 text-xs sm:text-sm text-gray-500 sm:gap-6">

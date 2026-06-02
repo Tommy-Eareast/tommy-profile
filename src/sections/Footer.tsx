@@ -1,14 +1,19 @@
 import Container from "@/components/Container";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
+    const { messages } = useLanguage();
+
+    const year = new Date().getFullYear();
+
     return (
         <footer className="border-t border-black/5 py-8">
             <Container>
-                <div className="flex items-center flex-col justify-between gap-3 sm:flex-row text-sm text-gray-400">
-                    <p>© 2026 Tommy</p>
+                <div className="flex flex-col items-center justify-between gap-3 text-sm text-gray-400 sm:flex-row">
+                    <p>© {year} Tommy</p>
 
                     <a href="#hero" className="transition hover:text-gray-600">
-                        Back to top
+                        {messages.footer.backToTop}
                     </a>
                 </div>
             </Container>
