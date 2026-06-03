@@ -21,66 +21,65 @@ body {
     overflow-x: hidden;
 }
 
-/* English Transition Animations */
+/* Language Transition Animations */
 
-@keyframes enTransitionLeft {
+@keyframes swipeOutLeft {
     0% {
         transform: translateX(0%);
+        opacity: 1;
     }
-
     100% {
         transform: translateX(-100%);
+        opacity: 0;
     }
 }
 
-@keyframes enTransitionRight {
+@keyframes swipeInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeOutRight {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes swipeInLeft {
     0% {
         transform: translateX(-100%);
+        opacity: 0;
     }
-
     100% {
         transform: translateX(0%);
+        opacity: 1;
     }
 }
 
-.en-left {
-    animation: enTransitionLeft 300ms ease-out;
-    opacity: 0;
+/* utility classes */
+.swipe-out-left {
+    animation: swipeOutLeft 300ms ease-in-out forwards;
 }
 
-.en-right {
-    animation: enTransitionRight 300ms ease-out;
-    opacity: 1;
+.swipe-in-right {
+    animation: swipeInRight 300ms ease-in-out forwards;
 }
 
-/* Chinese Transition Animations */
-
-@keyframes zhTransitionLeft {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(100%);
-    }
+.swipe-out-right {
+    animation: swipeOutRight 300ms ease-in-out forwards;
 }
 
-@keyframes zhTransitionRight {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.zh-left {
-    animation: zhTransitionLeft 300ms ease-out;
-    opacity: 0;
-}
-
-.zh-right {
-    animation: zhTransitionRight 300ms ease-out;
-    opacity: 1;
+.swipe-in-left {
+    animation: swipeInLeft 300ms ease-in-out forwards;
 }
