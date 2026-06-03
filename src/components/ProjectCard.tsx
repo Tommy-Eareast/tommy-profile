@@ -18,7 +18,15 @@ export default function ProjectCard({
     return (
         <article className="overflow-hidden rounded-[2rem] border border-black/5 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="relative h-56 w-full bg-gray-100">
-                <Image src={image} alt={title} fill className="object-cover" />
+                <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    sizes="(max-width: 640px) 100vw,
+           (max-width: 1024px) 50vw,
+           33vw"
+                    className="object-cover"
+                />
             </div>
 
             <div className="space-y-5 p-8">
