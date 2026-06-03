@@ -1,15 +1,11 @@
+import { cookies } from "next/headers";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
     subsets: ["latin"],
 });
 
@@ -64,15 +60,21 @@ export const metadata: Metadata = {
         images: ["/og-image.png"],
     },
 };
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const cookieStore = await cookies();
+
+    const language = cookieStore.get("language")?.value === "zh" ? "zh" : "en";
+
     return (
-        <html lang="en">
+        <html lang={language}>
             <body className={geistSans.className}>
-                <LanguageProvider>{children}</LanguageProvider>
+                <LanguageProvider initialLanguage={language}>
+                    {children}
+                </LanguageProvider>
             </body>
         </html>
     );

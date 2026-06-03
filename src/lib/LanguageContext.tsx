@@ -4,6 +4,7 @@ import { createContext, useContext, useMemo, useState } from "react";
 
 import en from "@/messages/en";
 import zh from "@/messages/zh";
+import { setLanguageCookie } from "@/lib/language-cookie";
 
 type Language = "en" | "zh";
 
@@ -17,11 +18,23 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
     undefined,
 );
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-    const [language, setLanguage] = useState<Language>("en");
+export function LanguageProvider({
+    children,
+    initialLanguage,
+}: {
+    children: React.ReactNode;
+    initialLanguage: Language;
+}) {
+    const [language, setLanguage] = useState<Language>(initialLanguage);
 
     const toggleLanguage = () => {
-        setLanguage((prev) => (prev === "en" ? "zh" : "en"));
+        setLanguage((prev) => {
+            const next = prev === "en" ? "zh" : "en";
+
+            setLanguageCookie(next); // sync SSR source
+
+            return next;
+        });
     };
 
     const messages = useMemo(() => (language === "en" ? en : zh), [language]);

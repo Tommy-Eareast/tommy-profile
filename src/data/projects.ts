@@ -20,11 +20,11 @@ export const projects = {
         },
 
         {
-            title: "AI Workflow Automation System",
+            title: "AI Workflow Automation System (In Progress)",
             description:
                 "An AI-powered automation system designed for a dance studio to streamline repetitive operations such as accounting, parent communication, and administrative workflows. Built with Python automation scripts and RAG-based chatbot integration for customer support.",
             techStack: ["Python", "RAG", "LLMs", "Automation", "APIs"],
-            image: "/images/projects/chatbot.png",
+            image: "/images/projects/ai-workflow.jpg",
             liveUrl: "#",
         },
 
@@ -59,11 +59,11 @@ export const projects = {
         },
 
         {
-            title: "AI 工作流自动化系统",
+            title: "AI 工作流自动化系统（未完成）",
             description:
                 "为舞蹈教室设计的 AI 自动化系统，用于处理财务计算、家长沟通及行政流程。结合 Python 自动化脚本与基于 RAG 的聊天机器人实现客户支持。",
             techStack: ["Python", "RAG", "大语言模型", "自动化", "API"],
-            image: "/images/projects/chatbot.png",
+            image: "/images/projects/ai-workflow.jpg",
             liveUrl: "#",
         },
 
