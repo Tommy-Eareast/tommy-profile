@@ -12,6 +12,7 @@ type LanguageContextType = {
     language: Language;
     toggleLanguage: () => void;
     messages: typeof en;
+    isTransitioning: boolean;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -26,15 +27,20 @@ export function LanguageProvider({
     initialLanguage: Language;
 }) {
     const [language, setLanguage] = useState<Language>(initialLanguage);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     const toggleLanguage = () => {
-        setLanguage((prev) => {
-            const next = prev === "en" ? "zh" : "en";
+        setIsTransitioning(true);
 
-            setLanguageCookie(next); // sync SSR source
+        setTimeout(() => {
+            setLanguage((prev) => {
+                const next = prev === "en" ? "zh" : "en";
+                setLanguageCookie(next);
+                return next;
+            });
 
-            return next;
-        });
+            setIsTransitioning(false);
+        }, 300);
     };
 
     const messages = useMemo(() => (language === "en" ? en : zh), [language]);
@@ -45,6 +51,7 @@ export function LanguageProvider({
                 language,
                 toggleLanguage,
                 messages,
+                isTransitioning,
             }}
         >
             {children}

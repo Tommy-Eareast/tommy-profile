@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 
+import LanguageTransition from "@/lib/LanguageTransition";
+
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -29,14 +31,10 @@ export const metadata: Metadata = {
 
     openGraph: {
         title: "Tommy | Software, AI & Systems",
-
         description:
             "Building software systems that connect AI and real-world workflows.",
-
         url: "https://tommy-profile.vercel.app",
-
         siteName: "Tommy",
-
         images: [
             {
                 url: "/og-image.png",
@@ -44,27 +42,24 @@ export const metadata: Metadata = {
                 height: 630,
             },
         ],
-
         locale: "en_AU",
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-
         title: "Tommy | Software, AI & Systems",
-
         description:
             "Building software systems that connect AI and real-world workflows.",
-
         images: ["/og-image.png"],
     },
 };
+
 export default async function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     const cookieStore = await cookies();
 
     const language = cookieStore.get("language")?.value === "zh" ? "zh" : "en";
@@ -73,7 +68,7 @@ export default async function RootLayout({
         <html lang={language}>
             <body className={geistSans.className}>
                 <LanguageProvider initialLanguage={language}>
-                    {children}
+                    <LanguageTransition>{children}</LanguageTransition>
                 </LanguageProvider>
             </body>
         </html>

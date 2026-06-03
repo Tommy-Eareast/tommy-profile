@@ -18,4 +18,69 @@ body {
     background: var(--background);
     color: var(--text-primary);
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* English Transition Animations */
+
+@keyframes enTransitionLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes enTransitionRight {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.en-left {
+    animation: enTransitionLeft 300ms ease-out;
+    opacity: 0;
+}
+
+.en-right {
+    animation: enTransitionRight 300ms ease-out;
+    opacity: 1;
+}
+
+/* Chinese Transition Animations */
+
+@keyframes zhTransitionLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes zhTransitionRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.zh-left {
+    animation: zhTransitionLeft 300ms ease-out;
+    opacity: 0;
+}
+
+.zh-right {
+    animation: zhTransitionRight 300ms ease-out;
+    opacity: 1;
 }
