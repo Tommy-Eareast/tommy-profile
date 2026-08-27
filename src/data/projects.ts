@@ -3,11 +3,32 @@ export const projects = {
         {
             title: "OPENET",
             description:
-                "A Python-based modular eye-tracking benchmarking platform for evaluating and comparing eye-tracking device performance. It includes regression analysis, data processing pipelines, visualization tools, and manual result filtering for experimental research workflows.",
-            techStack: ["Python", "Data Analysis", "Matplotlib", "Statistics"],
+                "A Python-based modular eye-tracking benchmarking platform for evaluating and comparing eye-tracking device performance. It includes regression analysis, data processing pipelines, data visualization, and manual result filtering for experimental research workflows.",
+            techStack: [
+                "Python",
+                "Data Analysis",
+                "Data Visualization",
+                "Statistics",
+            ],
             image: "/images/projects/openet.png",
             liveUrl:
                 "https://github.com/unsw-cse-comp99-3900/capstone-project-26t1-3900-m18b-cherry",
+        },
+
+        {
+            title: "Shift Sales Tracker",
+            description:
+                "A mobile-first offline sales tracking application for managing shifts, recording product sales, and generating structured reports. Designed as an installable PWA with local data persistence and no server required.",
+            techStack: [
+                "React",
+                "TypeScript",
+                "Vite",
+                "Dexie.js",
+                "IndexedDB",
+                "PWA",
+            ],
+            image: "/images/projects/shift-sale-tracker.png",
+            liveUrl: "https://shift-sale-tracker.vercel.app",
         },
 
         {
@@ -42,11 +63,27 @@ export const projects = {
         {
             title: "OPENET",
             description:
-                "一个基于 Python 的模块化眼动追踪评估平台，用于比较不同眼动设备性能。包含回归分析、数据处理流程、可视化工具以及实验结果手动筛选功能。",
-            techStack: ["Python", "数据分析", "Matplotlib", "统计学"],
+                "一个基于 Python 的模块化眼动追踪评估平台，用于比较不同眼动设备的性能。包含回归分析、数据处理流程、数据可视化以及实验结果手动筛选功能。",
+            techStack: ["Python", "数据分析", "数据可视化", "统计学"],
             image: "/images/projects/openet.png",
             liveUrl:
                 "https://github.com/unsw-cse-comp99-3900/capstone-project-26t1-3900-m18b-cherry",
+        },
+
+        {
+            title: "报表软件",
+            description:
+                "一个移动优先的离线销售追踪应用，用于管理工作班次、记录产品销售数据并生成结构化报表。支持作为 PWA 安装，并使用本地数据存储，无需服务器即可运行。",
+            techStack: [
+                "React",
+                "TypeScript",
+                "Vite",
+                "Dexie.js",
+                "IndexedDB",
+                "PWA",
+            ],
+            image: "/images/projects/shift-sale-tracker.png",
+            liveUrl: "https://shift-sale-tracker.vercel.app",
         },
 
         {
